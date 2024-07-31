@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio</title>
+  <link rel="stylesheet" href="output.css">
+  <link rel="stylesheet" href="portfolio-s.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <style>
+    /* Set background color light pink */
+    body {
+      background-color: #F8C8DC; /* Adjust this for your desired shade of pink */
+    }
+
+    /* Set navbar background color white */
+    header {
+      background-color: #AA336A;
+    }
+
+    header p {
+      color: #9F2B68; /* Dark pink color */
+    }
+    .skills {
+      width: 100%;
+      background-color: #e0e0e0;
+      border-radius: 5px;
+      overflow: hidden;
+      margin-bottom: 10px;
+    }
+
+    .skills div {
+      height: 24px;
+      color: white;
+      text-align: right;
+      padding-right: 10px;
+      line-height: 24px;
+    }
+
+    .html {
+      width: 90%;
+      background-color: #f06529;
+    }
+
+    .css {
+      width: 80%;
+      background-color: #2965f1;
+    }
+
+    .js {
+      width: 20%;
+      background-color: #f0db4f;
+    }
+
+    .python {
+      width: 40%;
+      background-color: #3776ab;
+    }
+
+    .skills-container {
+      width: 250px;
+    }
+  </style>
+</head>
+
+<body class="h-screen pb-[100px]">
+
+  <div id="main" class="h-full font-parth-font flex flex-col">
+
+    <header class="bg-white w-full h-auto flex items-center"> 
+      <div class="text-white mr-2 flex items-center justify-start mx-20 animate__animated backInDown">
+        <p class="font-semibold mr-2 animate__animated animate__backInLeft">Portfolio</p>
+        <img class="w-[2rem] my-2 mx-2 rounded-full animate__animated animate__rotateIn"
+          src="data:image/png;base64,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" <!-- Updated to use local file -->
+          alt="Logo">
+      </div>
+      <!-- Logo ends -->
+      <!-- Navbar items -->
+      <nav id="navbar-items" class="flex w-full justify-center text-electric-blue font-medium animate__animated animate__backInRight">
+        <a href="#" class="mx-[2rem] hover:text-emerald-600">Home</a>
+        <a href="#" class="mx-[2rem] hover:text-emerald-600">About</a>
+        <a href="#" class="mx-[2rem] hover:text-emerald-600">Contact</a>
+      </nav>
+      <!-- Navbar items end -->
+    </header>
+    <!-- Navbar ends -->
+
+    <!-- Portfolio card starts here -->
+    <main id="card" class="bg-beige md:w-full h-full mt-[2rem] mx-3 md:flex pb-[10rem]">
+      <!-- Left section -->
+      <section class="mx-[4rem] flex my-3">
+        <div id="photo-skills" class="flex flex-col">
+          <div class="md:w-[150px] w-[130px] h-[100px] mb-16">
+            <img class="rounded-lg animate__animated animate__backInLeft"
+              src="image.jpeg" <!-- Updated to use local file -->
+            
+          </div>
+
+          <div class="my-10 animate__animated animate__rotateInDownLeft " id="skills">
+            <h1 class="font-bold text-2xl my-5">My Skills</h1>
+
+            <p>HTML</p>
+            <div class="container">
+              <div class="skills html">90%</div>
+            </div>
+
+            <p>CSS</p>
+            <div class="container">
+              <div class="skills css">80%</div>
+            </div>
+
+            <p>JavaScript</p>
+            <div class="container">
+              <div class="skills js">20%</div>
+            </div>
+
+            <p>Python</p>
+            <div class="container">
+              <div class="skills python">40%</div> <!-- Corrected class name here -->
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Details section -->
+        <div id="name" class="md:mx-4 mx-8 my-5 animate__animated animate__backInLeft">
+          <p class="my-3 font-semibold text-xl text-slate-800">
+            <span class="text-black font-extrabold text-xl">Name:</span> Sayali Chavan
+          </p>
+          <p class="my-3 font-semibold text-md text-blue-800 text-nowrap">
+            <span class="font-extrabold text-xl text-black">Contact:</span> 9892293792
+          </p>
+          <p class="my-3 font-semibold text-xl text-slate-800">
+            <span class="text-black font-extrabold text-xl">Occupation:</span> Student
+          </p>
+        </div>
+        <!-- End of details section -->
+      </section>
+
+      <section id="right-section" class="pl-[2rem] pr-[2rem] my-[2rem] pt-3 bg-beige animate__animated animate__backInRight">
+        <h1 class="font-extrabold text-2xl my-2">About</h1>
+        <p class="text-lg">
+          Hey! Im sayali chavan, Third year engineering student with honors in data analytics. I'm good in web development, learned languages like C, Javascript, HTML, Python, CSS.
+          Im well versed in database management, Implemented postgre SQl. Im interested in Finance as well as machine learning and data science.
+        </p>
+      </section>
+    </main>
+    <!-- Portfolio card ends here -->
+
+  </div>
+
+</body>
+
+</html>
+

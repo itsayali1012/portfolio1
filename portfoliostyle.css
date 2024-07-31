@@ -1,0 +1,33 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.loading-text {
+  font-size: 24px;
+  animation: fadeOut 1s ease-in-out forwards;
+}
+
+@keyframes fadeOut {
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+.content {
+  display: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  /* Adjust styles for smaller screens */
+}
